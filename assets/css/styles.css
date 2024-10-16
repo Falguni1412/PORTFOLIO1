@@ -61,7 +61,7 @@
 /* Font size for large devices */
 @media screen and (min-width: 968px) {
   :root {
-    --big-font-size: 3rem;
+    --big-font-size: 2.5rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -202,6 +202,11 @@ img {
   color: var(--first-color);
 }
 
+.nav__toggle {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
 .nav__toggle:hover {
   color: var(--first-color);
 }
@@ -238,7 +243,7 @@ img {
   color: var(--first-color);
 }
 
-.nav__icons {
+.nav__icon {
   font-size: 1.2rem;
 }
 
@@ -325,6 +330,7 @@ img {
 }
 
 .home__scroll {
+  display: none;
   /* g */
 }
 
@@ -750,7 +756,7 @@ img {
 }
 
 .portfolio__img {
-  width: 315px;
+  width: 265px;
   border-radius: .5rem;
   justify-self: center;
 }
@@ -786,7 +792,7 @@ img {
   right: -.5rem;
 }
 
-.swiper-container-horizontal>.swiper-pagination-bullet {
+.swiper-horizontal>.swiper-pagination-bullets {
   bottom: -2.5rem;
 }
 
@@ -1047,7 +1053,7 @@ img {
   }
 
   /* .home__img*/
-  .home__blob-img {
+  .home_img {
     order: 1;
     justify-self: center;
   }
@@ -1278,7 +1284,7 @@ img {
     right: -3.5rem;
   }
 
-  .swiper-container-horizontal>.swiper-pagination-bullet {
+  .swiper-horizontal>.swiper-pagination-bullets {
     bottom: -4.5rem;
   }
 
