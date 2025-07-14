@@ -1292,31 +1292,42 @@ img {
   .contact__input {
     grid-template-columns: repeat(2, 1fr);
   }
+  .footer__links {
+    flex-direction: row;
+    column-gap: 2rem;
+  }
 }
 
 /*==================== SIGNATURE PRELOADER ====================*/
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+/* Preloader wrapper */
 #preloader {
   position: fixed;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
   flex-direction: column;
+  z-index: 9999;
 }
 
+/* Signature text */
 .signature {
   font-family: 'Great Vibes', cursive;
-  font-size: 4rem;
   color: white;
   opacity: 0;
   animation: fadeIn 1.5s ease-in forwards;
+  font-size: 2rem;
+  line-height: 1.2;
+  text-align: center;
+  padding: 0 1rem;
 }
 
+/* Line below signature */
 .line {
   width: 0;
   height: 2px;
@@ -1325,6 +1336,7 @@ img {
   animation: lineDraw 2s ease-in forwards 1.2s;
 }
 
+/* Animation keyframes */
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -1333,48 +1345,40 @@ img {
 
 @keyframes lineDraw {
   to {
-    width: 200px;
+    width: 120px;
   }
 }
 
+/* Hide main content initially */
 #main-content {
   filter: blur(10px);
   opacity: 0;
   transition: all 1s ease;
 }
 
+/* Show main content after preloader */
 #main-content.visible {
   filter: none;
   opacity: 1;
 }
 
-
-/*==================== RESPONSIVE PRELOADER ====================*/
-@media screen and (max-width: 768px) {
-  .signature {
-    font-size: 3rem;
-  }
-
-  .line {
-    width: 150px;
-  }
+/* RESPONSIVE TWEAKS */
+@media screen and (min-width: 600px) {
+  .signature { font-size: 2rem; }
+  .line { width: 140px; }
 }
 
-@media screen and (max-width: 480px) {
-  .signature {
-    font-size: 2.2rem;
-  }
-
-  .line {
-    width: 120px;
-  }
+@media screen and (min-width: 768px) {
+  .signature { font-size: 2.3rem; }
+  .line { width: 160px; }
 }
-@media screen and (max-width: 350px) {
-  .signature {
-    font-size: 1.8rem;
-  }
 
-  .line {
-    width: 100px;
-  }
-} 
+@media screen and (min-width: 992px) {
+  .signature { font-size: 3rem; }
+  .line { width: 180px; }
+}
+
+@media screen and (min-width: 1200px) {
+  .signature { font-size: 4rem; }
+  .line { width: 200px; }
+}
